@@ -1,0 +1,43 @@
+{
+  "name": "jzguilherme/php-seo-pipeline",
+  "description": "Asynchronous PHP pipeline for AI-driven e-commerce SEO enrichment (WooCommerce & Magento 2) with strict schema validation and queue workers.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "José Guilherme",
+      "homepage": "https://github.com/JzGuilherme"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-pdo": "*",
+    "ezyang/htmlpurifier": "^4.17",
+    "monolog/monolog": "^3.5",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "JzGuilherme\\SeoPipeline\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JzGuilherme\\SeoPipeline\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "analyse": "phpstan analyse src tests --level=8"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
